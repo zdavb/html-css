@@ -1,0 +1,49 @@
+<!doctype>
+<html>
+<head>
+	<title>测试父元素和子元素的相对定位</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf8">
+	<style type="text/css">
+		#main{
+			width: 500px;
+			height: 500px;
+			position: relative;
+			margin: auto;
+			border: solid 1px;
+		}
+		.child{
+			width: 50px;
+			height: 50px;
+			position: absolute;
+		}
+		#one{
+			background-color: red;
+			left: 0px;
+			top:0px;
+		}
+		#two{
+			background-color: yellow;
+			left: 50px;
+			top:50px;
+		}
+		#three{
+			background-color: blue;
+			left: 100px;
+			top:100px;
+		}
+		#four{
+			background-color: purple;
+			left: 150px;
+			top:150px;
+		}
+	</style>
+</head>
+<body>
+	<div id="main">
+		<div id="one" class="child"></div>
+		<div id="two" class="child"></div>
+		<div id="three" class="child"></div>
+		<div id="four" class="child"></div>
+	</div>
+</body>
+</html>
