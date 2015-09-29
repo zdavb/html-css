@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="content-type" content="text/html;charset=utf8">
+<link rel="stylesheet" type="text/css" href="">
+<script src="./jQuery/jquery-2.1.4.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#maindiv").click(function(event) {
+			if($(this).children('ul').css("display") == "none")
+				$(this).children('ul').css("display","block");
+			else\
+				$(this).children('ul').css('display',"none");
+		});	
+		//阻止向上冒泡
+		$("#maindiv > ul").click(function(event) {
+			event.stopPropagation();
+		});
+	});
+</script>
+<title>测试如何屏蔽子元素的事件</title>
+<body>
+	<div id="maindiv">
+		<button>click me</button>
+		<ul style="display:none">
+			<li>first</li>
+			<li>second</li>
+			<li>third</li>
+		</ul>
+	</div>
+</body>
+</html>
